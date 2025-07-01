@@ -95,7 +95,7 @@ services:
       interval: 5s
       retries: 3
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
       analytics:
@@ -165,7 +165,7 @@ services:
     image: postgrest/postgrest:v12.2.12
     restart: unless-stopped
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
       analytics:
@@ -189,7 +189,7 @@ services:
     image: supabase/realtime:v2.34.47
     restart: unless-stopped
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
       analytics:
@@ -249,7 +249,7 @@ services:
       interval: 5s
       retries: 3
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
       rest:
@@ -359,7 +359,7 @@ services:
       interval: 5s
       retries: 10
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
     environment:
@@ -385,7 +385,7 @@ services:
       # GOOGLE_PROJECT_NUMBER: ${GOOGLE_PROJECT_NUMBER}
 
   # Comment out everything below this point if you are using an external Postgres database
-  # db:
+  db:
   #   container_name: supabase-db
   #   image: supabase/postgres:15.8.1.060
   #   restart: unless-stopped
