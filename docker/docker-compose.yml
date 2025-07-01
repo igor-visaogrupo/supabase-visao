@@ -299,7 +299,7 @@ services:
     image: supabase/postgres-meta:v0.89.3
     restart: unless-stopped
     depends_on:
-      # db:
+      db:
         # Disable this if you are using an external Postgres database
         # condition: service_healthy
       analytics:
